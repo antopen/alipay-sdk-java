@@ -1,75 +1,75 @@
 
 ```
-¿ª·¢ÓïÑÔ£ºJAVA
-ÊÊÓÃJDK°æ±¾£º1.5
-°æÈ¨£ºÂìÒÏ½ğÈÚ·şÎñ¼¯ÍÅ
+å¼€å‘è¯­è¨€ï¼šJAVA
+é€‚ç”¨JDKç‰ˆæœ¬ï¼š1.5
+ç‰ˆæƒï¼šèš‚èšé‡‘èæœåŠ¡é›†å›¢
 ```
 
-## Ö÷ÒªÀàÎÄ¼ş¹¦ÄÜËµÃ÷
+## ä¸»è¦ç±»æ–‡ä»¶åŠŸèƒ½è¯´æ˜
 ```
 DefaultAlipayClient.java
 public DefaultAlipayClient(String serverUrl, String appId, String privateKey);
 ```
-+ ¹¦ÄÜ£º¹¹Ôì·½·¨
-+ ÊäÈë£º
-    + serverUrl ·Ç¿Õ£¬ÇëÇó·şÎñÆ÷µØÖ·£¨µ÷ÊÔ£ºhttp://openapi.alipaydev.com/gateway.do ÏßÉÏ£ºhttps://openapi.alipay.com/gateway.do £©
-    + appId ·Ç¿Õ£¬Ó¦ÓÃID
-    + privateKey ·Ç¿Õ£¬Ë½Ô¿
-+ Êä³ö£ºµ÷ÓÃ¿Í»§¶ËÊµÀı¶ÔÏó
++ åŠŸèƒ½ï¼šæ„é€ æ–¹æ³•
++ è¾“å…¥ï¼š
+    + serverUrl éç©ºï¼Œè¯·æ±‚æœåŠ¡å™¨åœ°å€ï¼ˆè°ƒè¯•ï¼šhttp://openapi.alipaydev.com/gateway.do çº¿ä¸Šï¼šhttps://openapi.alipay.com/gateway.do ï¼‰
+    + appId éç©ºï¼Œåº”ç”¨ID
+    + privateKey éç©ºï¼Œç§é’¥
++ è¾“å‡ºï¼šè°ƒç”¨å®¢æˆ·ç«¯å®ä¾‹å¯¹è±¡
 
 ```
 DefaultAlipayClient.java
 public <T extends AlipayResponse> T execute(AlipayRequest<T> request);
 ```
-+ ¹¦ÄÜ£ºÖ´ĞĞÇëÇóµ÷ÓÃ£¨ÊÊÓÃÓÚ²»ĞèÒªÊÚÈ¨½Ó¿Úµ÷ÓÃ£©
-+ ÊäÈë£ºrequest ½Ó¿ÚÇëÇó¶ÔÏó
-+ Êä³ö£ºT  ÇëÇó·µ»Ø¶ÔÏó
++ åŠŸèƒ½ï¼šæ‰§è¡Œè¯·æ±‚è°ƒç”¨ï¼ˆé€‚ç”¨äºä¸éœ€è¦æˆæƒæ¥å£è°ƒç”¨ï¼‰
++ è¾“å…¥ï¼šrequest æ¥å£è¯·æ±‚å¯¹è±¡
++ è¾“å‡ºï¼šT  è¯·æ±‚è¿”å›å¯¹è±¡
 
 ```
 DefaultAlipayClient.java
 public <T extends AlipayResponse> T execute(AlipayRequest<T> request, String accessToken);
 ```
-+ ¹¦ÄÜ£ºÖ´ĞĞÇëÇóµ÷ÓÃ£¨ÊÊÓÃÓÚĞèÒªÊÚÈ¨½Ó¿Úµ÷ÓÃ£©
-+ ÊäÈë£º
-    + request ½Ó¿ÚÇëÇó¶ÔÏó
-    + authToken ÊÚÈ¨ÁîÅÆ
-+ Êä³ö£ºT  ÇëÇó·µ»Ø¶ÔÏó
++ åŠŸèƒ½ï¼šæ‰§è¡Œè¯·æ±‚è°ƒç”¨ï¼ˆé€‚ç”¨äºéœ€è¦æˆæƒæ¥å£è°ƒç”¨ï¼‰
++ è¾“å…¥ï¼š
+    + request æ¥å£è¯·æ±‚å¯¹è±¡
+    + authToken æˆæƒä»¤ç‰Œ
++ è¾“å‡ºï¼šT  è¯·æ±‚è¿”å›å¯¹è±¡
 
-## µ÷ÓÃÊ¾Àı
+## è°ƒç”¨ç¤ºä¾‹
 
 
-## Ç©ÃûÏà¹ØÀà
+## ç­¾åç›¸å…³ç±»
 ```
 AlipaySignature.java
 public static String rsaSign(Map<String, String> params, String privateKey, String charset);
 ```
-+ ¹¦ÄÜ£ºRSAÇ©Ãû
-+ ÊäÈë£º
-    + params ´ıÇ©Ãû²ÎÊımap
-    + privateKey Ë½Ô¿
-    + charset Ç©Ãû±àÂë¸ñÊ½
-+ Êä³ö£ºÇ©Ãû½á¹û
++ åŠŸèƒ½ï¼šRSAç­¾å
++ è¾“å…¥ï¼š
+    + params å¾…ç­¾åå‚æ•°map
+    + privateKey ç§é’¥
+    + charset ç­¾åç¼–ç æ ¼å¼
++ è¾“å‡ºï¼šç­¾åç»“æœ
 
 ```
 AlipaySignature.java
 public static boolean rsaCheckV2(Map<String, String> params, String publicKey, String charset);
 ```
-+ ¹¦ÄÜ£ºRSAÑéÇ©
-+ ÊäÈë£º
-    + params Ç©Ãû²ÎÊıÄÚÈİmap
-    + publicKey ¹«Ô¿
-    + charset Ç©Ãû±àÂë¸ñÊ½
-+ Êä³ö£ºÑéÇ©½á¹û
++ åŠŸèƒ½ï¼šRSAéªŒç­¾
++ è¾“å…¥ï¼š
+    + params ç­¾åå‚æ•°å†…å®¹map
+    + publicKey å…¬é’¥
+    + charset ç­¾åç¼–ç æ ¼å¼
++ è¾“å‡ºï¼šéªŒç­¾ç»“æœ
 
 ```
 AlipaySignature.java
 public static boolean rsaCheckContent(String content, String sign, String publicKey,String charset);
 ```
-+ ¹¦ÄÜ£ºRSAÑéÇ©
-+ ÊäÈë£º
-    + content Ç©Ãû²ÎÊıÄÚÈİ×Ö·û´®
-    + sign Ç©Ãû
-    + publicKey ¹«Ô¿
-    + charset Ç©Ãû±àÂë¸ñÊ½
-+ Êä³ö£ºÑéÇ©½á¹û
++ åŠŸèƒ½ï¼šRSAéªŒç­¾
++ è¾“å…¥ï¼š
+    + content ç­¾åå‚æ•°å†…å®¹å­—ç¬¦ä¸²
+    + sign ç­¾å
+    + publicKey å…¬é’¥
+    + charset ç­¾åç¼–ç æ ¼å¼
++ è¾“å‡ºï¼šéªŒç­¾ç»“æœ
 
